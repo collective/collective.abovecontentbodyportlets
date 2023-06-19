@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<portlets xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="plone"
+>
+  <portletmanager name="plone.abovecontentbodyportlets"
+                  type="collective.abovecontentbodyportlets.interfaces.IPortletColumn"
+  />
+</portlets>
