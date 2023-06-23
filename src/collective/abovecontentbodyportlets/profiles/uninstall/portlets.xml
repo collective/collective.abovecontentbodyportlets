@@ -2,7 +2,7 @@
 <portlets xmlns:i18n="http://xml.zope.org/namespaces/i18n"
           i18n:domain="plone"
 >
-  <portletmanager name="plone.abovecontentbodyportlets"
+  <portletmanager name="collective.abovecontentbodyportlets"
                   remove="true"
                   type="collective.abovecontentbodyportlets.interfaces.IPortletColumn"
   />

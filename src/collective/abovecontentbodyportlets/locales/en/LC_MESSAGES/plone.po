@@ -19,5 +19,5 @@ msgstr ""
 
 # This translation is shown in the Manage Portlets toolbar menu.
 #. Default: replace dots by spaces, and titleize.
-msgid "plone.abovecontentbodyportlets"
+msgid "collective.abovecontentbodyportlets"
 msgstr "Above content body"

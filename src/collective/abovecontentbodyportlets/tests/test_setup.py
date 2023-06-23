@@ -49,7 +49,7 @@ class TestSetup(unittest.TestCase):
         registrations = [
             r.name for r in sm.registeredUtilities() if IPortletManager == r.provided
         ]
-        self.assertIn("plone.abovecontentbodyportlets", registrations)
+        self.assertIn("collective.abovecontentbodyportlets", registrations)
 
 
 class TestUninstall(unittest.TestCase):
@@ -85,4 +85,4 @@ class TestUninstall(unittest.TestCase):
         registrations = [
             r.name for r in sm.registeredUtilities() if IPortletManager == r.provided
         ]
-        self.assertNotIn("plone.abovecontentbodyportlets", registrations)
+        self.assertNotIn("collective.abovecontentbodyportlets", registrations)

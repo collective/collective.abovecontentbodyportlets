@@ -9,7 +9,7 @@ class AboveContentBodyPortletsViewlet(ViewletBase):
     def render_portlets(self):
         portlet_manager = getMultiAdapter(
             (self.context, self.request, self.__parent__),
-            name="plone.abovecontentbodyportlets",
+            name="collective.abovecontentbodyportlets",
         )
         portlet_manager.update()
         return portlet_manager.render()
