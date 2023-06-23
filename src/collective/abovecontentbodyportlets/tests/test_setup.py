@@ -1,10 +1,12 @@
 """Setup tests for this package."""
-from collective.abovecontentbodyportlets.testing import (  # noqa: E501
+from collective.abovecontentbodyportlets.testing import (
     COLLECTIVE_ABOVE_CONTENT_PORTLETS_INTEGRATION_TESTING,
 )
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.portlets.interfaces import IPortletManager
+from zope.component import getSiteManager
 
 import unittest
 
@@ -42,6 +44,13 @@ class TestSetup(unittest.TestCase):
             ICollectiveAboveContentBodyPortletsLayer, utils.registered_layers()
         )
 
+    def test_portlet_manager_registered(self):
+        sm = getSiteManager(self.portal)
+        registrations = [
+            r.name for r in sm.registeredUtilities() if IPortletManager == r.provided
+        ]
+        self.assertIn("plone.abovecontentbodyportlets", registrations)
+
 
 class TestUninstall(unittest.TestCase):
     layer = COLLECTIVE_ABOVE_CONTENT_PORTLETS_INTEGRATION_TESTING
@@ -70,3 +79,10 @@ class TestUninstall(unittest.TestCase):
         self.assertNotIn(
             ICollectiveAboveContentBodyPortletsLayer, utils.registered_layers()
         )
+
+    def test_portlet_manager_removed(self):
+        sm = getSiteManager(self.portal)
+        registrations = [
+            r.name for r in sm.registeredUtilities() if IPortletManager == r.provided
+        ]
+        self.assertNotIn("plone.abovecontentbodyportlets", registrations)
