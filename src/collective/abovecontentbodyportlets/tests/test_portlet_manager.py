@@ -11,7 +11,7 @@ from zope.component import getUtility
 import unittest
 
 
-class TestPortlet(unittest.TestCase):
+class TestPortletManager(unittest.TestCase):
     layer = COLLECTIVE_ABOVE_CONTENT_PORTLETS_INTEGRATION_TESTING
 
     def setUp(self):
