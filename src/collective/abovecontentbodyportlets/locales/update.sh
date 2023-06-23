@@ -10,3 +10,7 @@ domain=collective.abovecontentbodyportlets
 
 i18ndude rebuild-pot --pot $domain.pot --create $domain ../
 i18ndude sync --pot $domain.pot */LC_MESSAGES/$domain.po
+
+# For the plone domain we currently only have one manual entry.
+# i18ndude rebuild-pot --pot plone.pot --create plone --merge plone-manual.pot ../profiles
+i18ndude sync --pot plone.pot */LC_MESSAGES/plone.po

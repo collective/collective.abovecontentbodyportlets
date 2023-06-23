@@ -1,10 +1,11 @@
+# Currently this contains only one msgid, and it is manual.
 #--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
 #SOME DESCRIPTIVE TITLE.
 #FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-06-23 20:16+0000\n"
+"Project-Id-Version: collective.abovecontentbodyportlets\n"
+"POT-Creation-Date: 2023-06-19 21:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,20 +16,9 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.abovecontentbodyportlets\n"
+"Domain: plone\n"
 
-#: ../configure.zcml:19
-msgid "Installs the collective.abovecontentbodyportlets add-on."
-msgstr ""
-
-#: ../configure.zcml:28
-msgid "Uninstalls the collective.abovecontentbodyportlets add-on."
-msgstr ""
-
-#: ../configure.zcml:19
-msgid "collective.abovecontentbodyportlets"
-msgstr ""
-
-#: ../configure.zcml:28
-msgid "collective.abovecontentbodyportlets (uninstall)"
+# This translation is shown in the Manage Portlets toolbar menu.
+# Default: replace dots by spaces, and titleize.
+msgid "plone.abovecontentbodyportlets"
 msgstr ""

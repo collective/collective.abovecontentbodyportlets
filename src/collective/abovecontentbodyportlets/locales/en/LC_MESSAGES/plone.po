@@ -1,0 +1,23 @@
+# Currently this contains only one msgid, and it is manual.
+# Maurits van Rees <m.van.rees@zestsoftware.nl>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.abovecontentbodyportlets\n"
+"POT-Creation-Date: 2023-06-19 21:31+0000\n"
+"PO-Revision-Date: 2023-06-19 22:13 +0200\n"
+"Last-Translator: Maurits van Rees <m.van.rees@zestsoftware.nl>\n"
+"Language-Team: Zest Software <info@zestsoftware.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+"Language: en\n"
+
+# This translation is shown in the Manage Portlets toolbar menu.
+#. Default: replace dots by spaces, and titleize.
+msgid "plone.abovecontentbodyportlets"
+msgstr "Above content body"
