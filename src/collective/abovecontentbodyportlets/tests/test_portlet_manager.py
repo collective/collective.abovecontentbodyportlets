@@ -39,7 +39,19 @@ class TestPortletManager(unittest.TestCase):
         content_core_pos = html.find('id="content-core"')
         self.assertLess(manager_pos, content_core_pos)
 
-    def testInvokeAddview(self):
+    def test_portlet_manager_link(self):
+        link = "@@topbar-manage-portlets/plone.abovecontentbodyportlets"
+        html = self.portal()
+        self.assertIn(link, html)
+        # We cannot traverse all the way, we need to use two steps.
+        manage_portlets = self.portal.restrictedTraverse("@@topbar-manage-portlets")
+        page = manage_portlets.publishTraverse(
+            self.request, "plone.abovecontentbodyportlets"
+        )
+        html = page()
+        self.assertIn("Add portlet", html)
+
+    def test_with_actual_portlet(self):
         # Adapted from login portlet tests.
         portlet = getUtility(IPortletType, name="portlets.Login")
         mapping = self.portal.restrictedTraverse(
